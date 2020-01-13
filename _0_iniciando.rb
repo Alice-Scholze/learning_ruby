@@ -95,3 +95,12 @@ c.upcase!
 
 puts c
 puts a
+
+
+# Algo interessante, ruby não tem tipos boleanos. Mas entao como podemos setar true e false?
+a = true
+
+# True e false são na verdade objetos:
+puts "True class: #{true.class} - False class: #{false.class}"
+
+# true e false são singletons, ou seja, há apenas uma instanca de true e false em toda aplicação
