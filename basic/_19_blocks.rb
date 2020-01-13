@@ -64,7 +64,7 @@ proc.call()
 # Se passar vários argumentos para a proc, ela vai utilizar os que precisa e ignorar o restante:
 proc.call('a', 'b', 'c')
 
-# Outra diferença é
+# Outra diferença é:
 def metodo_lambda
     -> () { return "return lambda" }.call
     return "return metodo"
@@ -78,3 +78,11 @@ def metodo_proc
 end
 
 puts metodo_proc
+
+# O retorno da lambda fica dentro do contexto do método, ja o da proc não
+# O retorno do método_lambda é "return metodo" e o metodo_proc é "return proc"
+# A proc "sai" de dentro do método :~
+
+
+
+
